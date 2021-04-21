@@ -82,6 +82,8 @@ set_target_properties( jsoncpp_lib PROPERTIES
     POSITION_INDEPENDENT_CODE ON
 )
 
+set_target_properties(jsoncpp_lib PROPERTIES DEBUG_POSTFIX d)
+
 # Set library's runtime search path on OSX
 if(APPLE)
     set_target_properties(jsoncpp_lib PROPERTIES INSTALL_RPATH "@loader_path/.")
